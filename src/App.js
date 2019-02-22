@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Globalstyle } from'./style';
+import Header from './common/header'
 class App extends Component {
   render() {
     return (
       <React.Fragment>
       <Globalstyle />
-       <div>hello world</div>
+       <Header />
        </React.Fragment>
     );
   }
