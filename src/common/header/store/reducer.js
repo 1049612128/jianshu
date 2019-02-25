@@ -1,18 +1,15 @@
 import * as constants from './actionTypes'
-const defaultStore ={
+import {fromJS} from 'immutable';
+const defaultStore =fromJS({
     focused:false
-}
+})
 
 export default (state=defaultStore,action)=>{
     if(action.type===constants.SEARCH_FOCUS){
-        const newState =JSON.parse(JSON.stringify(state))
-        newState.focused =true;
-        return newState
+        return state.set('focused',true)
     }
     if(action.type===constants.SEARCH_BLUR){
-        const newState =JSON.parse(JSON.stringify(state))
-        newState.focused =false;
-        return newState
+        return state.set('focused',false)
     }
     return state;
 }
