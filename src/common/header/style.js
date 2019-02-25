@@ -57,12 +57,18 @@ export const NavItem =styled.a`
     }
 `
 export const SearchWrapper =styled.div`
-    .slide-enter{
+    &.slide-enter{
         transitinon:all .2s ease-out;
     }
-    .slide-enter-active{
+    &.slide-enter-active{
         width:320px;
         transitinon:all .2s ease-out;
+    }
+    &.slide-exit{
+        transitinon:all .2s ease-out;
+    }
+    &.slide-exit-active{
+        width:240px;
     }
     position:relative;
     float:left;
