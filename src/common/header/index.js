@@ -1,8 +1,38 @@
 import React from 'react';
-import {HeaderWrapper,Logo,Headercontain,Nav,NavItem,NavSearch,Button,I,SearchWrapper} from './style'
+import {HeaderWrapper,Logo,Headercontain,Nav,NavItem,NavSearch,Button,I,SearchWrapper,SearchInfo,SearchInfoTitle,SearchInfoSwitch,SearchInfoItem,SearchInfoList,SearchInfoA,SearchInfoWrap} from './style'
 // import { CSSTransition } from 'react-transition-group';
-import {connect} from 'react-redux'
-import  {actionCreators}  from './store'
+import {connect} from 'react-redux';
+import  {actionCreators}  from './store';
+const getListArea = (show) =>{
+    if(show){
+        return (
+            <SearchInfoWrap>
+                <SearchInfo>
+                            <SearchInfoTitle>
+                                热门搜索
+                                <SearchInfoSwitch>换一批</SearchInfoSwitch>
+                            </SearchInfoTitle>
+                            <SearchInfoList>
+                                <SearchInfoItem><SearchInfoA>教育</SearchInfoA></SearchInfoItem>
+                                <SearchInfoItem><SearchInfoA>教育</SearchInfoA></SearchInfoItem>
+                                <SearchInfoItem><SearchInfoA>教育</SearchInfoA></SearchInfoItem>
+                                <SearchInfoItem><SearchInfoA>教育</SearchInfoA></SearchInfoItem>
+                                <SearchInfoItem><SearchInfoA>教育</SearchInfoA></SearchInfoItem>
+                                <SearchInfoItem><SearchInfoA>教育</SearchInfoA></SearchInfoItem>
+                                <SearchInfoItem><SearchInfoA>教育</SearchInfoA></SearchInfoItem>
+                                <SearchInfoItem><SearchInfoA>教育</SearchInfoA></SearchInfoItem>
+                                <SearchInfoItem><SearchInfoA>教育</SearchInfoA></SearchInfoItem>
+                                <SearchInfoItem><SearchInfoA>教育</SearchInfoA></SearchInfoItem>
+                                <SearchInfoItem><SearchInfoA>教育</SearchInfoA></SearchInfoItem>
+                                <SearchInfoItem><SearchInfoA>教育</SearchInfoA></SearchInfoItem>
+                            </SearchInfoList>
+                </SearchInfo>
+            </SearchInfoWrap>
+        )
+    }else{
+        return null;
+    }
+}
 const Header = (props) =>{
     return <HeaderWrapper>
     <Headercontain>
@@ -21,6 +51,7 @@ const Header = (props) =>{
                 classNames="slide"> */}
                     <NavSearch onFocus={props.handleInputFocus} onBlur={props.handleInputBlur} className={props.focused?'focused':''}></NavSearch>
                     <I className={props.focused?'focused iconfont':'iconfont'}>&#xe627;</I>
+                    {getListArea(props.focused)}
                 {/* </CSSTransition> */}
             </SearchWrapper>
         </Nav>

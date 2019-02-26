@@ -1,7 +1,8 @@
 import * as constants from './actionTypes'
 import {fromJS} from 'immutable';
 const defaultStore =fromJS({
-    focused:false
+    focused:false,
+    list:[]
 })
 
 export default (state=defaultStore,action)=>{

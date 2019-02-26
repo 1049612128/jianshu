@@ -140,3 +140,63 @@ export const Button =styled.div`
 export const I =styled.i`
     margin-right:5px;
 `
+export const SearchInfo =styled.div`
+    padding:0px 20px;
+    border-bottom: 1px solid #f0f0f0;
+`
+export const SearchInfoWrap =styled.div`
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,.2);
+    margin-top: 9px;
+    width: 250px;
+    left: 0;
+    top: 100%;
+    // visibility: hidden;
+    // opacity: 0;
+    border-radius: 4px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,.2);
+    ::before{
+        content: "";
+        left: 27px;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        top: -5px;
+        z-index: -1;
+    }
+`
+export const SearchInfoTitle =styled.div`
+    width:100%;
+    float: left;
+    font-size: 14px;
+    color: #969696;
+`
+export const SearchInfoSwitch =styled.a`
+    float: right;
+    font-size: 13px;
+    color: #969696;
+    background-color: transparent;
+    border-width: 0;
+    padding: 0;
+`
+export const SearchInfoList =styled.ul`
+    overflow:hidden;
+    float:left;
+`
+export const SearchInfoItem =styled.li`
+    margin-right: 10px;
+    float:left;
+    line-height: 28px;
+`
+export const SearchInfoA =styled.a`
+    padding: 2px 6px;
+    font-size: 12px;
+    color: #787878;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+`
